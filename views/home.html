@@ -7,6 +7,8 @@
 
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="icon" href="./images/vacation-favicon.png">
+
+    <script src="./scripts/vacation.js" defer></script>
 </head>
 <body>
     <main>
@@ -15,14 +17,16 @@
             <h1 class="hero-content">Book Your Dream Vacation</h1>
         </section>
 
-        <form id="vacation-form" action="#" method="get" >
+        <form id="vacation-form" action="/confirm" method="get" >
             <fieldset id="destination-fieldset">
                 <legend>Destination</legend>
                 <select id="dest-choose">
-                    <option id="none">Choose a destination...</option>
+                    <option id="none" value="none">Choose a destination...</option>
                     <option id="california">California</option>
                     <option id="palm-beach">Palm Beach, Florida</option>
                     <option id="tokyo">Tokyo, Japan</option>
+                    <option id="hawaii">Oahu, Hawai'i</option>
+                    <option id="maldives">Maldives</option>
                 </select>
                 <p class="err" id="destination-err">*Please enter a valid destination</p>
             </fieldset>
@@ -30,13 +34,13 @@
             <label for="departure-date">
                 Departure Date
                 <input type="date" id="departure-date" name="departure-date">
-                <p class="err" id="destination-err">*Please enter a valid date</p>
+                <p class="err" id="departure-err">*Please enter a valid date</p>
             </label>
 
             <label for="travelers">
                 Number of Travelers
                 <input type="number" id="travelers" name="travelers" min="0" value="0">
-                <p class="err" id="destination-err">*Please enter a valid number of travelers</p>
+                <p class="err" id="travelers-err">*Please enter a valid number of travelers</p>
             </label>
 
             <button type="submit">Find My Vacation</button>
