@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacation</title>
+
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="icon" href="./images/vacation-favicon.png">
+</head>
+<body>
+    <main>
+        <section class="hero">
+            <img src="./images/vacation.jpg" class="hero-image" alt="scenic beach view" />
+            <h1 class="hero-content">Book Your Dream Vacation</h1>
+        </section>
+
+        <form id="vacation-form" action="#" method="get" >
+            <fieldset id="destination-fieldset">
+                <legend>Destination</legend>
+                <select id="dest-choose">
+                    <option id="none">Choose a destination...</option>
+                    <option id="california">California</option>
+                    <option id="palm-beach">Palm Beach, Florida</option>
+                    <option id="tokyo">Tokyo, Japan</option>
+                </select>
+                <p class="err" id="destination-err">*Please enter a valid destination</p>
+            </fieldset>
+
+            <label for="departure-date">
+                Departure Date
+                <input type="date" id="departure-date" name="departure-date">
+                <p class="err" id="destination-err">*Please enter a valid date</p>
+            </label>
+
+            <label for="travelers">
+                Number of Travelers
+                <input type="number" id="travelers" name="travelers" min="0" value="0">
+                <p class="err" id="destination-err">*Please enter a valid number of travelers</p>
+            </label>
+
+            <button type="submit">Find My Vacation</button>
+        </form>
+    </main>
+</body>
+</html>
